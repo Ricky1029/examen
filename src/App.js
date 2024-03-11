@@ -56,6 +56,7 @@ function App() {
     setId(id);
     setShow(true);
   }
+
   const handleUpdate = async () => {
     const updateVal = doc(db, "sandwiches", id);
     await updateDoc(updateVal, {
@@ -125,6 +126,7 @@ function App() {
       setPan('');
       setSize('');
       setImage(null);
+      alert('Sandwich Creado Exitosamente Excitoso!');
     } catch (error) {
       alert('No sabe subir un sandwich el wey');
     }
